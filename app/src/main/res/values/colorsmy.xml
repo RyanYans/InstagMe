@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="font_title">#333333</color>
+    <color name="font_sub_title">#999999</color>
+    <color name="my_user_loan">#99ffffff</color>
+    <color name="dividing_line_light">#e6e6e6</color>
+    <color name="my_loan_yellow_bg_light">#fcf9f2</color>
+    <color name="my_loan_detail_text">#ffb700</color>
+    <color name="my_loan_send_code">#fa7d00</color>
+    <color name="font_yellow_treasure_box">#ffb432</color>
+    <color name="loan_step_bg">#ffcc00</color>
+</resources>

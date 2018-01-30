@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <EditText
+            android:id="@+id/et_login_email"
+            android:drawableLeft="@drawable/ic_email_black"
+            android:drawablePadding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入邮箱名"
+            android:text="buct132@163.com"
+            android:textColorHint="#6666"
+            android:background="@null"
+            android:maxLines="1"
+            android:textCursorDrawable="@null"
+            android:textColor="#333333"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="#ccc" />
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <EditText
+                android:id="@+id/et_login_password"
+                android:drawableLeft="@drawable/ic_key_black"
+                android:drawablePadding="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:text="abc12345"
+                android:textColorHint="#6666"
+                android:background="@null"
+                android:maxLines="1"
+                android:textCursorDrawable="@null"
+                android:textColor="#333333"
+                />
+            <ImageView
+                android:id="@+id/iv_login_see"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_login_unseen_password"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="#ccc" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/selector_btn_login"
+        android:text="登陆"
+        android:textColor="#eee"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/tv_login_skip"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳过登陆"
+        android:textColor="#999"
+        />
+
+</LinearLayout>

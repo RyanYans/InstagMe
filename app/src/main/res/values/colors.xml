@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">	#b94646</color>
+    <color name="colorPrimaryDark">#b94646</color>
+    <color name="colorAccent">#b94646</color>、
+
+    <!-- 白色 -->
+    <color name="white">#ffffff</color>
+    <!-- 黄色色 -->
+    <color name="yellow">#ffb700</color>
+    <!--黑色-->
+    <color name="black">#333333</color>
+    <!--灰色字体-->
+    <color name="gray">#999999</color>
+    <!--灰色背景-->
+
+    <!-- 备注提示文字 -->
+    <color name="remark_tips">#ababab</color>
+    <!-- 正文内容 -->
+    <color name="text_content">#212121</color>
+
+    <!--借款结果页内容竖线颜色-->
+    <color name="confirm_apply_infor_cont_line">#e6e6e6</color>
+    <!--借款结果页内容金额数字颜色-->
+    <color name="confirm_apply_infor_cont_amount">#ff6c3c</color>
+    <!--借款页面按弹框标题的颜色-->
+    <color name="confirm_apply_infor_dialog_title">@color/gray</color>
+    <!--借款页面按弹框自动授权的颜色-->
+    <color name="confirm_apply_infor_dialog_auto">@color/black</color>
+</resources>

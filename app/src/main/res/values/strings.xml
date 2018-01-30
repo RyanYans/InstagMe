@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">InstagMe</string>
+
+    <string name="common_confirm">确定</string>
+    <string name="common_cancel">取消</string>
+
+    <string name="rtv_service_tips">哎呀，加载出错了～</string>
+    <string name="rtv_service_msg_tips"></string>
+    <string name="rtv_click_screen">点击屏幕刷新，重新尝试。</string>
+    <string name="rtv_not_net">网络不给力</string>
+    <string name="rtv_not_data">没有找到相关记录</string>
+
+    <string name="confirm_apply_info_dialog_title">标题</string>
+    <string name="confirm_apply_info_dialog_auto">内容</string>
+
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dp_22"
+        android:background="@drawable/bg_rounded_box">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_19"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#212121"
+            android:textSize="18dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:text="标题"/>
+
+        <ScrollView
+            android:id="@+id/svMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <TextView
+                android:id="@+id/txtMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="5dip"
+                android:textSize="14dp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                tools:text="内容"/>
+        </ScrollView>
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_gravity="bottom"
+            android:background="#e6e6e6" />
+
+        <LinearLayout
+            android:id="@+id/dialog_lly"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="bottom"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:divider="@drawable/horizontal_divider_line"
+            android:showDividers="middle"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_bottom_left_rounded_box_selector"
+                android:gravity="center"
+                android:textSize="19dp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                tools:text="取消"/>
+
+            <Button
+                android:id="@+id/btnOk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_bottom_right_rounded_box_selector"
+                android:gravity="center"
+                android:textColor="#ffc61a"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:visibility="visible"
+                tools:text="确定"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
