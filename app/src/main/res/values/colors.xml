@@ -10,6 +10,8 @@
     <color name="yellow">#ffb700</color>
     <!--黑色-->
     <color name="black">#333333</color>
+    <!--全黑色-->
+    <color name="AllBlack">#000000</color>
     <!--灰色字体-->
     <color name="gray">#999999</color>
     <!--灰色背景-->
@@ -27,4 +29,11 @@
     <color name="confirm_apply_infor_dialog_title">@color/gray</color>
     <!--借款页面按弹框自动授权的颜色-->
     <color name="confirm_apply_infor_dialog_auto">@color/black</color>
+
+    <color name="card_view_background">@color/white</color>
+
+    <!-- 我的页面按钮颜色 -->
+    <color name="colorItemPress">#e3e3e3</color>
+    <color name="colorItemDefault">#ffffff</color>
+    <color name="colorBtnTextRedPress">#99b94646</color>
 </resources>

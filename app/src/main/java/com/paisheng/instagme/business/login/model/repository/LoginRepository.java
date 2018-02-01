@@ -19,8 +19,16 @@ import java.util.HashMap;
  * @date: 2018/1/29 15:19
  */
 
-
 public class LoginRepository {
+    /**
+     *<br> Description: todo(这里用一句话描述这个方法的作用)
+     *<br> Author:      yuanbaining
+     *<br> Date:        2018/2/1 18:49
+     * @param email         邮箱
+     * @param password      密码
+     * @param baseView      覆盖的父布局
+     * @param callback      回掉接口
+     */
     public static void toLoginNet(String email, String password, IBaseView baseView, final ICommonRequestCallback<LoginResultInfo> callback) {
         HashMap<String, String> params = new HashMap<>();
         params.put("action", "login");
@@ -42,8 +50,5 @@ public class LoginRepository {
                         callback.onFailure(requestCall, e);
                     }
                 });
-
-
-        System.out.println("=========================>" + call.getUrl());
     }
 }

@@ -1,6 +1,6 @@
 package com.paisheng.instagme.business.login.view;
 
-import android.content.Intent;
+import android.Manifest;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.InputType;
@@ -9,18 +9,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.alibaba.android.arouter.launcher.ARouter;
 import com.jakewharton.rxbinding2.view.RxView;
 import com.paisheng.instagme.R;
 import com.paisheng.instagme.base.AbstractIMActivity;
-import com.paisheng.instagme.business.home.main.view.MainActivity;
 import com.paisheng.instagme.business.login.contract.ILoginContract;
 import com.paisheng.instagme.business.login.presenter.LoginPresenter;
 import com.paisheng.instagme.common.arouter.LoginRouterConstant;
-import com.paisheng.instagme.common.arouter.MainRouterConstant;
-
+import com.paisheng.instagme.common.grant.CommonPermissionCallBack;
+import com.paisheng.lib.grant.core.PermissionRequestFactory;
 import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
@@ -39,7 +36,8 @@ import io.reactivex.functions.Consumer;
  */
 
 @Route(path = LoginRouterConstant.LOGIN_PAGE, name = "登陆页面")
-public class LoginActivity extends AbstractIMActivity<LoginPresenter> implements ILoginContract.IView{
+public class LoginActivity extends AbstractIMActivity<LoginPresenter>
+        implements ILoginContract.IView {
 
     @BindView(R.id.btn_login)
     Button mBtnLogin;
@@ -52,6 +50,7 @@ public class LoginActivity extends AbstractIMActivity<LoginPresenter> implements
     @BindView(R.id.iv_login_see)
     ImageView mIvLoginSee;
     private LoginPresenter mLoginPresenter;
+    /*** Password显示/隐藏标志位 ***/
     private boolean isPasswordShow = false;
 
     @Override
@@ -64,8 +63,12 @@ public class LoginActivity extends AbstractIMActivity<LoginPresenter> implements
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         initView();
+
+        // 启动时，申请位置权限
+        PermissionRequestFactory.create(this)
+                .addPermission(Manifest.permission.ACCESS_COARSE_LOCATION)
+                .request(new CommonPermissionCallBack(this));
     }
 
     private void initView() {
@@ -78,7 +81,6 @@ public class LoginActivity extends AbstractIMActivity<LoginPresenter> implements
                         String email = mEtLoginEmail.getText().toString();
                         String password = mEtLoginPassword.getText().toString();
                         mLoginPresenter.toLoginNet(email, password);
-
                     }
                 });
     }
@@ -90,16 +92,18 @@ public class LoginActivity extends AbstractIMActivity<LoginPresenter> implements
                 changePsdShow();
                 break;
             case R.id.tv_login_skip:
-                jumpToMainActivity();
+                mLoginPresenter.toLoginSkip();
+                break;
+            default:
+                break;
         }
     }
 
-    private void jumpToMainActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
-    }
-
+    /**
+     *<br> Description: 修改密码显示隐藏
+     *<br> Author:      yuanbaining
+     *<br> Date:        2018/2/1 18:43
+     */
     private void changePsdShow() {
         if (isPasswordShow) {
             // 显示 -> 隐藏

@@ -12,11 +12,11 @@ import com.paisheng.instagme.base.IBaseView;
 
 
 public interface IMainActivityContract {
-    public interface IView extends IBaseView{
+    interface IView extends IBaseView{
 
     }
 
-    public interface IPresenter {
-
+    interface IPresenter {
+        void exit();
     }
 }

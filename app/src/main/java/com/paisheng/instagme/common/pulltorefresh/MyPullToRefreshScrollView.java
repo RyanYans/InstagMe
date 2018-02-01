@@ -3,6 +3,7 @@ package com.paisheng.instagme.common.pulltorefresh;
 import android.content.Context;
 import android.util.AttributeSet;
 
+import com.paisheng.lib.vendor.ptr.PtrUIHandler;
 import com.paisheng.lib.widget.pulltorefresh.PullToRefreshScrollView;
 
 /**
@@ -22,6 +23,7 @@ public class MyPullToRefreshScrollView extends PullToRefreshScrollView {
 
     public MyPullToRefreshScrollView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        setDefaultLoadingFooterView();
     }
 
     @Override
@@ -46,5 +48,10 @@ public class MyPullToRefreshScrollView extends PullToRefreshScrollView {
         if (myPtrDefaultHeader != null) {
             myPtrDefaultHeader.showIvTDPtrLoadingHeader();
         }
+    }
+
+    @Override
+    public void setLoadingFooterView(PtrUIHandler ptrUIHandler) {
+        super.setLoadingFooterView(ptrUIHandler);
     }
 }

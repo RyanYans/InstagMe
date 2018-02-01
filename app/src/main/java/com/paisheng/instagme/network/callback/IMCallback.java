@@ -80,10 +80,10 @@ public abstract class IMCallback<T> extends NetworkCallback<T> {
             return;
         }
 
-        switch (e.getCode()) {
+        /*switch (e.getCode()) {
             //无网络
             case ApiException.CODE_NO_NETWORK:
-                getIBaseView().displayRequestNotNet(requestCall.getTaskId());
+                getIBaseView().displayRequestNotNet(requestCall.getTaskId(),e);
                 break;
             //请求失败onFailure
             case ApiException.CODE_OKHTTP_FAILURE:
@@ -132,9 +132,7 @@ public abstract class IMCallback<T> extends NetworkCallback<T> {
                 ServerDownInfoBean serverDownInfo = (ServerDownInfoBean) e.getResultObject();
                 getIBaseView().displayRquestServerDown(requestCall.getTaskId(), serverDownInfo);
                 break;
-        }
-
-
+        }*/
 
     }
 

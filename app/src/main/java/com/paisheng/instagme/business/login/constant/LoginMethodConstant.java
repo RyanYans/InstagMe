@@ -9,6 +9,6 @@ package com.paisheng.instagme.business.login.constant;
  */
 
 public class LoginMethodConstant {
-    /*** 登录**/
+    /*** 登录 **/
     public static final String LOGIN_LOGIN_METHOD = "index.php?mod=login";
 }

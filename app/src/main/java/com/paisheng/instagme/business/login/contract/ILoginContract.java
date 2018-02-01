@@ -11,15 +11,23 @@ import com.paisheng.instagme.base.IBaseView;
  * @date: 2018/1/24 16:20
  */
 
-
-public class ILoginContract {
-    public interface IView extends IBaseView {
-
+public interface ILoginContract {
+    interface IView extends IBaseView {
     }
 
-    public interface IPresenter {
+    interface IPresenter {
+        /**
+         *<br> Description: 正常登陆
+         *<br> Author:      yuanbaining
+         *<br> Date:        2018/1/31 16:19
+         */
         void toLoginNet(String email, String password);
 
+        /**
+         *<br> Description: 跳过登陆
+         *<br> Author:      yuanbaining
+         *<br> Date:        2018/1/31 16:20
+         */
         void toLoginSkip();
     }
 

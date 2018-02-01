@@ -2,7 +2,7 @@ package com.paisheng.instagme.business.login.model.entity;
 
 /**
  * @author: yuanbaining
- * @Filename: LoginResultInfo
+ * @Filename: LoginResultInfo - 登陆数据返回实体
  * @Description:
  * @Copyright: Copyright (c) 2017 Tuandai Inc. All rights reserved.
  * @date: 2018/1/29 15:54
